@@ -1,0 +1,149 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.parent {
+    min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 72px;
+    height: 100vh;
+    border-right: 1px solid #ddd;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+
+    padding: 18px 0;
+    background: white;
+    z-index: 100;
+}
+
+.icon {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Main */
+
+.main {
+    margin-left: 72px;
+    padding: 10px 16px;
+}
+
+/* Search Bar */
+
+.top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search {
+    height: 48px;
+    background: #e8e8e5;
+    border-radius: 15px;
+
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 18px;
+    font-size: 16px;
+}
+
+.search-text {
+    flex: 1;
+}
+
+.menuu {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Categories */
+
+.categories {
+    display: flex;
+    gap: 12px;
+    margin: 20px 0 28px;
+
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.categories::-webkit-scrollbar {
+    display: none;
+}
+
+.category {
+    min-width: 140px;
+    height: 48px;
+
+    border-radius: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 15px;
+    font-weight: bold;
+    white-space: nowrap;
+    background: #ddd;
+}
+
+/* Category Colors */
+
+.green { background: #d7f5dc; }
+.blue { background: #d8eaff; }
+.purple { background: #eadcff; }
+.pink { background: #ffdce9; }
+.red { background: #ffdddd; }
+.orange { background: #ffe6c9; }
+
+/* Image Gallery */
+
+.cards {
+    columns: 5 180px;
+    column-gap: 18px;
+    padding: 10px 0;
+}
+
+.gallery-item {
+    width: 100%;
+    margin-bottom: 18px;
+    break-inside: avoid;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.cards img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.cards img:hover {
+    transform: scale(1.04);
+}
